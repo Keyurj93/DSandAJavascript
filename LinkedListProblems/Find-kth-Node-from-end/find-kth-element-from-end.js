@@ -1,5 +1,4 @@
 var LinkedList = require('../../DataStructures/linkedlist').LinkedList;
-var ListNode = require('../../DataStructures/linkedlist').ListNode;
 
 var ll = new LinkedList();
 ll.add(1);
@@ -18,6 +17,7 @@ LinkedList.prototype.findkthElementFromEnd =  function(number){
     let count = 0;
     let newNode = this.head;
     
+
     while(count!==(number-1)){
         newNode = newNode.next;
         count++;
