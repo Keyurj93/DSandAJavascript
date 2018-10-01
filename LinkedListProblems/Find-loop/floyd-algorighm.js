@@ -13,11 +13,21 @@ LinkedList.prototype.detectLoop = function(){
         if(slowPtr==fastPtr){
             // loop exists
             slowPtr = this.head;
+            // find start of loop
             while(slowPtr!==fastPtr){
                 slowPtr =slowPtr.next;
                 fastPtr = fastPtr.next;
             }
             console.log("Start of loop ",fastPtr.data);
+            // find length of loop
+            let lengthofLoop = 0;
+            if(slowPtr===fastPtr){ 
+                do{
+                    slowPtr = slowPtr.next;
+                    lengthofLoop++;
+                }while(slowPtr!==fastPtr);
+            }
+            console.log("length of loop ",lengthofLoop);
             return;
         }
     }
