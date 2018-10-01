@@ -38,4 +38,4 @@
     }
   
 }
-module.exports = {LinkedList};
+module.exports = {LinkedList,ListNode};
